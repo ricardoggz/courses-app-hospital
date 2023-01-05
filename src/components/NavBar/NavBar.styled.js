@@ -9,6 +9,9 @@ export const Nav = styled.nav`
     align-items:center;
     display:flex;
     justify-content:space-between;
+    div img{
+        width:15%;
+    }
 `
 export const Ul = styled.ul`
     color:var(--color-light-primary);
