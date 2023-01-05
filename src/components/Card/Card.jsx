@@ -1,50 +1,23 @@
-import { CardWrapper, CardImage, CardsContainer, CardDescription, CardButton } from './Card.styled'
-import image from '../../assets/img.jpeg'
-export const Card = ()=>{
+import PropTypes from 'prop-types'
+import {
+    CardWrapper,
+    CardImage,
+    CardDescription,
+    CardButton 
+} from './Card.styled'
+
+export const Card = ({image, description})=>{
     return (
-        <CardsContainer className='flex-container'>
             <CardWrapper>
                 <CardImage>
                     <img src={image} alt="" />
                 </CardImage>
-                <CardDescription>
-                <p>
-                    2º Simposium neonatología HIMFG: Atención multidisciplinaria en el cuidado del prematuro
-                </p>
-                <span>
-                    Del 28 al 30 de noviembre de 2022
-                </span>
-                </CardDescription>
+                <CardDescription>{description}</CardDescription>
                 <CardButton href='#'>Comprar curso</CardButton>
             </CardWrapper>
-            <CardWrapper>
-                <CardImage>
-                    <img src={image} alt="" />
-                </CardImage>
-                <CardDescription>
-                <p>
-                    2º Simposium neonatología HIMFG: Atención multidisciplinaria en el cuidado del prematuro
-                </p>
-                <span>
-                    Del 28 al 30 de noviembre de 2022
-                </span>
-                </CardDescription>
-                <CardButton href='#'>Comprar curso</CardButton>
-            </CardWrapper>
-            <CardWrapper>
-                <CardImage>
-                    <img src={image} alt="" />
-                </CardImage>
-                <CardDescription>
-                <p>
-                    2º Simposium neonatología HIMFG: Atención multidisciplinaria en el cuidado del prematuro
-                </p>
-                <span>
-                    Del 28 al 30 de noviembre de 2022
-                </span>
-                </CardDescription>
-                <CardButton href='#'>Comprar curso</CardButton>
-            </CardWrapper>
-        </CardsContainer>
     )
+}
+Card.propTypes = {
+    image : PropTypes.node,
+    description : PropTypes.string
 }

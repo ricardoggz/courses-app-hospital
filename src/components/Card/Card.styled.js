@@ -23,12 +23,6 @@ export const CardDescription = styled.div`
     text-align:justify;
     width:100%;
 `
-export const CardsContainer = styled.div`
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:1rem;
-    place-content: center;
-`
 export const CardButton = styled.a`
     background: var(--color-blue-primary);
     color:var(--color-light-primary);
