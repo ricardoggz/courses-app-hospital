@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '../../components'
 import { Form, Input, LoginWrapper, LoginImage } from './Login.styled'
 import logo from '../../assets/logo.png'
+import { login } from '../../services'
 
 export const Login = ()=>{
     const [user, setUser] = useState(null);
@@ -12,12 +13,16 @@ export const Login = ()=>{
             [target.name]: target.value 
         })
     }
+    const onSubmit = (evt)=>{
+        evt.preventDefault()
+        login(user)
+    }
     return (
             <LoginWrapper>
                 <LoginImage>
                             <img src={logo} alt='Hospital infantil federico gomez'/>
                 </LoginImage>
-                <Form>
+                <Form onSubmit={onSubmit}>
                     <label>Nombre de usuario</label>
                     <Input
                         type='text'
