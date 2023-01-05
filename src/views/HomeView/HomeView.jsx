@@ -1,4 +1,4 @@
-import { NavBar, Container, Card,Title } from '../../components'
+import { NavBar, Container, Card, Title, GridContainer } from '../../components'
 
 export const HomeView = ()=>{
     return (
@@ -6,7 +6,7 @@ export const HomeView = ()=>{
             <NavBar />
             <Container>
                 <Title>Nuestros cursos disponibles</Title>
-                <Card />
+                <GridContainer><Card /></GridContainer>
             </Container>
         </>
     )
