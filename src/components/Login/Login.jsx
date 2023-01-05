@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Button } from '../../components'
 import { Form, Input, LoginWrapper } from './Login.styled'
 
 export const Login = ()=>{
@@ -27,6 +28,7 @@ export const Login = ()=>{
                     name='user_password'
                     onChange={onChange}
                 />
+                <Button>Iniciar sesiòn</Button>
             </Form>
         </LoginWrapper>
     )
