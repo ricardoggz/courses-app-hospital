@@ -12,24 +12,24 @@ export const Login = ()=>{
         })
     }
     return (
-        <LoginWrapper>
-            <Form>
-                <label>Nombre de usuario</label>
-                <Input
-                    type='text'
-                    required
-                    name='user_user'
-                    onChange={onChange}
+            <LoginWrapper>
+                <Form>
+                    <label>Nombre de usuario</label>
+                    <Input
+                        type='text'
+                        required
+                        name='user_user'
+                        onChange={onChange}
+                        />
+                    <label>Contraseña</label>
+                    <Input
+                    type='password'
+                        required
+                        name='user_password'
+                        onChange={onChange}
                     />
-                <label>Contraseña</label>
-                <Input
-                type='password'
-                    required
-                    name='user_password'
-                    onChange={onChange}
-                />
-                <Button>Iniciar sesiòn</Button>
-            </Form>
-        </LoginWrapper>
+                    <Button>Iniciar sesiòn</Button>
+                </Form>
+            </LoginWrapper>
     )
 }

@@ -1,5 +1,10 @@
-import { Login } from '../../components'
+import { Container, Login, Title } from '../../components'
 
 export const LoginView = ()=>{
-    return <Login />
+    return (
+        <Container>
+            <Title>Ingresa en nuestra plataforma de cursos</Title>
+            <Login />
+        </Container>
+    )
 }
