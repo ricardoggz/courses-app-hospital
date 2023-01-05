@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 import { ButtonWrapper } from "./Button.styled"
 
-export const Button = ({title, onClick})=>{
+export const Button = ({children, onClick})=>{
     return (
         <ButtonWrapper
             onClick={onClick}
         >
-            {title}
+            {children}
         </ButtonWrapper>
     )
 }
 Button.proptypes ={
-    title: PropTypes.node,
+    children: PropTypes.node,
     onClick: PropTypes.func
 }
