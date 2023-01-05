@@ -15,4 +15,9 @@ export const Ul = styled.ul`
     display:flex;
     gap:1rem;
     list-style: none;
+
+    li a {
+        color:var(--color-light-primary);
+        text-decoration:none;
+    }
 `

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Header, Nav, Ul } from './NavBar.styled'
 
 export const NavBar = ()=>{
@@ -5,8 +6,8 @@ export const NavBar = ()=>{
         <Header>
             <Nav className='flex-container'>
                 <Ul>
-                    <li>Iniciar sesión</li>
-                    <li>Registrarse</li>
+                    <li><Link to='/'>Inicio</Link></li>
+                    <li><Link to='/login'>Iniciar sesiòn</Link></li>
                 </Ul>
             </Nav>
         </Header>
