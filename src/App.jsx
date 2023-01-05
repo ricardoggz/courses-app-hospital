@@ -1,12 +1,12 @@
 import { NavBar } from './components'
 import { AppRoutes } from './routes'
-import { HomeView } from './views'
+import { HomeView, DashboardUserView } from './views'
 
 function App() {
   return (
     <>
       <NavBar />
-      <AppRoutes />
+      <DashboardUserView />
     </>
   )
 }
