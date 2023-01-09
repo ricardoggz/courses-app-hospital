@@ -7,6 +7,7 @@ export const CardWrapper = styled.div`
     display:flex;
     flex-direction: column;
     gap:1rem;
+    height:100%;
     padding:1rem;
 `
 export const CardImage = styled.figure`
@@ -19,6 +20,7 @@ export const CardImage = styled.figure`
     }
 `
 export const CardDescription = styled.div`
+    height:100%;
     line-height: 2rem;
     text-align:justify;
     width:100%;
