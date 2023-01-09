@@ -3,7 +3,12 @@ import { VideoWrapper } from "./Video.styled"
 
 export const Video = ({src})=>{
     return (
-        <VideoWrapper src={src} controls></VideoWrapper>
+        <VideoWrapper
+        src={src}
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen 
+        />
     )
 }
 Video.propTypes ={
