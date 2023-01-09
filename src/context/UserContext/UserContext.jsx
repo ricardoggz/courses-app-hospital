@@ -1,10 +1,18 @@
-import { createContext } from "react"
+import { useState, createContext } from "react"
 import PropTypes from 'prop-types'
 
 export const UserContext = createContext(null)
 export const UserProvider = ({children})=> {
+    const [user, setUser] = useState(null)
+    const saveUser = (user)=>{
+        localStorage.setItem('user', JSON.stringify(user))
+        return setUser(user)
+    }
+    const deleteAdmin = ()=>{
+        localStorage.removeItem('user')
+    }
     return (
-        <UserContext.Provider>
+        <UserContext.Provider value={{saveUser, user, deleteAdmin}}>
             { children }
         </UserContext.Provider>
     )

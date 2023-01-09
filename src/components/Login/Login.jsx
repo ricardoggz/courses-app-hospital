@@ -1,26 +1,32 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Button } from '../../components'
 import { Form, Input, LoginWrapper, LoginImage } from './Login.styled'
 import logo from '../../assets/logo.png'
 import { login } from '../../services'
+import { UserContext } from '../../context'
 
 export const Login = ()=>{
-    const [user, setUser] = useState(null);
+    const { saveUser } = useContext(UserContext)
+    const [input, setInput] = useState(null);
     const onChange = (evt)=>{
         const {target} = evt
-        return setUser({
-            ...user,
+        return setInput({
+            ...input,
             [target.name]: target.value 
         })
     }
     const onSubmit = (evt)=>{
         evt.preventDefault()
-        login(user)
+        const response = login(input)
+        response.then(({data}) => {
+            data[0] ? saveUser(data[0]) : console.log('Usuario o contraseña incorrectos')
+        })
+        return response
     }
     return (
             <LoginWrapper>
                 <LoginImage>
-                            <img src={logo} alt='Hospital infantil federico gomez'/>
+                    <img src={logo} alt='Hospital infantil federico gomez'/>
                 </LoginImage>
                 <Form onSubmit={onSubmit}>
                     <label>Nombre de usuario</label>
