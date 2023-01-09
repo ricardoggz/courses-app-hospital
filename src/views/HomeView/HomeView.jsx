@@ -1,4 +1,4 @@
-import { NavBar, Container, Card, Title, GridContainer } from '../../components'
+import { NavBar, Container, Card, Title, GridContainer, Spinner } from '../../components'
 import { useFetch } from '../../hooks'
 
 export const HomeView = ()=>{
@@ -14,7 +14,9 @@ export const HomeView = ()=>{
                 <Title>Nuestros cursos disponibles</Title>
                 <GridContainer>
                     {
-                        !loading ?
+                        loading?
+                        <Spinner />
+                        :
                         data.data.map((course, index)=>(
                             <Card
                                 key={index}
@@ -22,8 +24,6 @@ export const HomeView = ()=>{
                                 description={course.name}
                             />
                         ))
-                        :
-                        <p>Cargando cursos</p>
                     }
                 </GridContainer>
             </Container>
