@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { BsCartFill } from 'react-icons/bs'
 import { Header, Nav, Ul, NavButton } from './NavBar.styled'
 import logo from '../../assets/logo.png'
 
@@ -17,6 +18,7 @@ export const NavBar = ()=>{
                 <Ul open={isOpen}>
                     <li><Link to='/' onClick={showMenu}>Inicio</Link></li>
                     <li><Link to='/login' onClick={showMenu}>Iniciar sesiòn</Link></li>
+                    <li><Link to='/' className='cart'><BsCartFill /> Carrito</Link></li>
                 </Ul>
             </Nav>
         </Header>

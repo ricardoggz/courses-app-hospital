@@ -19,9 +19,15 @@ export const Ul = styled.ul`
     gap:1rem;
     list-style: none;
 
-    li a {
+    li a{
         color:var(--color-light-primary);
         text-decoration:none;
+    }
+    .cart{
+        background:var(--color-light-primary);
+        border-radius:5px;
+        color:var(--color-blue-primary);
+        padding:0.5em;
     }
 
     @media (min-width:240px) and (max-width:880px){
