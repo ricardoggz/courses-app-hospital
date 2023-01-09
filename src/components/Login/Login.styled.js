@@ -8,6 +8,9 @@ export const Form = styled.form`
     gap: 1rem;
     padding:1rem;
     width:30%;
+    @media (min-width:240px) and (max-width:880px){
+        width:90%;
+    }
 `
 export const Input = styled.input`
     padding:1rem;
