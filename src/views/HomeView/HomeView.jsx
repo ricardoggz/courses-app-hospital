@@ -6,26 +6,29 @@ export const HomeView = ()=>{
         headers: { Authorization: `Bearer 586637bf90ea7727edc8c90c95b056c3` }
     };
     const [loading, data] = useFetch({
-        url: 'https://api.vimeo.com/me/videos?fields=pictures,title,name,player_embed_url&page=1',
+        url: 'https://api.vimeo.com/me/projects/14457817/videos',
         config: config
     })
+    console.log(data)
     return (
             <Container>
                 <Title>Nuestros cursos disponibles</Title>
-                <GridContainer>
-                    {
-                        loading?
-                        <Spinner />
-                        :
-                        data.data.map((course, index)=>(
-                            <Card
-                                key={index}
-                                image={course.pictures.base_link}
-                                description={course.name}
-                            />
-                        ))
-                    }
-                </GridContainer>
+                {
+                    loading?
+                    <Spinner />
+                    :
+                    <GridContainer>
+                        {
+                            data.data.map((course, index)=>(
+                                <Card
+                                    key={index}
+                                    image={course.pictures.base_link}
+                                    description={course.name}
+                                />
+                            ))
+                        }
+                    </GridContainer>
+                }
             </Container>
     )
 }
