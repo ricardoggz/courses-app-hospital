@@ -3,5 +3,9 @@ import styled from 'styled-components'
 export const GridWrapper = styled.div`
     display:grid;
     gap:1rem;
-    grid-template-columns: repeat(4,1fr);   
+    grid-template-columns: repeat(4,1fr);
+    
+    @media (min-width:240px) and (max-width:880px){
+        grid-template-columns: 1fr;
+    }
 `
