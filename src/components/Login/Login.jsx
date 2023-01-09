@@ -21,6 +21,7 @@ export const Login = ()=>{
         response.then(({data}) => {
             data[0] ? saveUser(data[0]) : console.log('Usuario o contraseña incorrectos')
         })
+        document.location.reload()
         return response
     }
     return (
