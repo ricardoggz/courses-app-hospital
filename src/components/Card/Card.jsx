@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { CartContext } from '../../context'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { BsFillCartPlusFill } from 'react-icons/bs'
@@ -9,6 +11,7 @@ import {
 } from './Card.styled'
 
 export const Card = ({image, description})=>{
+    const {increment} = useContext(CartContext)
     return (
             <CardWrapper>
                 <CardImage>
@@ -17,7 +20,7 @@ export const Card = ({image, description})=>{
                 <CardDescription>{description}</CardDescription>
                 <CardButtons>
                     <Link to ='/'>Comprar curso</Link>
-                    <Link to ='/' className='button-cart'>
+                    <Link to ='/' className='button-cart' onClick={increment}>
                         <BsFillCartPlusFill /> Agregar al carrito
                     </Link>
                 </CardButtons>
