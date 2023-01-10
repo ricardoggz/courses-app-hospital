@@ -20,7 +20,7 @@ export const NavBar = ()=>{
                 <Ul open={isOpen}>
                     <li><Link to='/' onClick={showMenu}>Inicio</Link></li>
                     <li><Link to='/login' onClick={showMenu}>Iniciar sesiòn</Link></li>
-                    <li><Link to='/' className='cart'><BsCartFill /> Carrito {count}</Link></li>
+                    <li><Link to='/cart' className='cart'><BsCartFill /> Carrito {count}</Link></li>
                 </Ul>
             </Nav>
         </Header>
