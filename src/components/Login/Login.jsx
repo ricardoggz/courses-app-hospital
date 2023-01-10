@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components'
 import { Form, Input, LoginWrapper, LoginImage } from './Login.styled'
 import logo from '../../assets/logo.png'
@@ -6,6 +7,7 @@ import { login } from '../../services'
 import { UserContext } from '../../context'
 
 export const Login = ()=>{
+    const navigate = useNavigate()
     const { saveUser } = useContext(UserContext)
     const [input, setInput] = useState(null);
     const onChange = (evt)=>{
@@ -19,9 +21,12 @@ export const Login = ()=>{
         evt.preventDefault()
         const response = login(input)
         response.then(({data}) => {
-            data[0] ? saveUser(data[0]) : console.log('Usuario o contraseña incorrectos')
+            if(data[0]){
+                saveUser(data[0])
+                navigate('/dashboard')
+            }
         })
-        document.location.reload()
+        .catch(err =>{ throw new Error(err)})
         return response
     }
     return (
