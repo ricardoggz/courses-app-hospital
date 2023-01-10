@@ -12,6 +12,9 @@ import {
 
 export const Card = ({image, description})=>{
     const {increment} = useContext(CartContext)
+    const addCourse = ()=>{
+        increment(description)
+    }
     return (
             <CardWrapper>
                 <CardImage>
@@ -20,7 +23,7 @@ export const Card = ({image, description})=>{
                 <CardDescription>{description}</CardDescription>
                 <CardButtons>
                     <Link to ='/'>Comprar curso</Link>
-                    <Link to ='/' className='button-cart' onClick={increment}>
+                    <Link to ='/' className='button-cart' onClick={addCourse}>
                         <BsFillCartPlusFill /> Agregar al carrito
                     </Link>
                 </CardButtons>
