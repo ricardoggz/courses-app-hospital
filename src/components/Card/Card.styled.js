@@ -25,11 +25,21 @@ export const CardDescription = styled.div`
     text-align:justify;
     width:100%;
 `
-export const CardButton = styled.a`
-    background: var(--color-blue-primary);
-    color:var(--color-light-primary);
-    padding: 1rem;
-    text-align:center;
-    text-decoration:none;
+export const CardButtons = styled.div`
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
     width:100%;
+    a{
+        background: var(--color-blue-primary);
+        color:var(--color-light-primary);
+        padding: 0.5rem;
+        text-align:center;
+        text-decoration:none;
+        width:100%;
+    }
+    .button-cart{
+        background:var(--color-blue-secondary);
+        color:var(--color-light-primary);
+    }
 `

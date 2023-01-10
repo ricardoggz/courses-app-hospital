@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import { BsFillCartPlusFill } from 'react-icons/bs'
 import {
     CardWrapper,
     CardImage,
-    CardDescription,
-    CardButton 
+    CardDescription, 
+    CardButtons
 } from './Card.styled'
 
 export const Card = ({image, description})=>{
@@ -13,7 +15,12 @@ export const Card = ({image, description})=>{
                     <img src={image} alt="" />
                 </CardImage>
                 <CardDescription>{description}</CardDescription>
-                <CardButton href='#'>Comprar curso</CardButton>
+                <CardButtons>
+                    <Link to ='/'>Comprar curso</Link>
+                    <Link to ='/' className='button-cart'>
+                        <BsFillCartPlusFill /> Agregar al carrito
+                    </Link>
+                </CardButtons>
             </CardWrapper>
     )
 }
