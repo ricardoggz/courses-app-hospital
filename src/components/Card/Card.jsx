@@ -13,7 +13,7 @@ import {
 export const Card = ({image, description})=>{
     const {increment} = useContext(CartContext)
     const addCourse = ()=>{
-        increment(description)
+        increment({image, description})
     }
     return (
             <CardWrapper>
