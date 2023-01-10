@@ -4,6 +4,7 @@ export const CartContext = createContext(null)
 
 export const CartProvider = ({ children })=>{
     const [ count, setCount ] = useState(0)
+    const [ disabled, setDisabled ] = useState('')
     const [coursesList, setCoursesList ] = useState([])
     const increment = (courseName)=> {
         setCount(()=>{
@@ -14,9 +15,10 @@ export const CartProvider = ({ children })=>{
             courses.push(courseName)
             return [...coursesList, ...courses]
         })
+        setDisabled('disabled')
     }
     return (
-        <CartContext.Provider value={{count, increment, coursesList}}>
+        <CartContext.Provider value={{count, increment, coursesList, disabled}}>
             { children }
         </CartContext.Provider>
     )

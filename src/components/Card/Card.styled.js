@@ -30,7 +30,7 @@ export const CardButtons = styled.div`
     flex-direction:column;
     gap:0.5rem;
     width:100%;
-    a{
+    a, button{
         background: var(--color-blue-primary);
         color:var(--color-light-primary);
         padding: 0.5rem;
@@ -40,6 +40,10 @@ export const CardButtons = styled.div`
     }
     .button-cart{
         background:var(--color-blue-secondary);
+        border:none;
         color:var(--color-light-primary);
+    }
+    .disabled{
+        display:none;
     }
 `

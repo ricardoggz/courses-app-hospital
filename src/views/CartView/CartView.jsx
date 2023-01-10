@@ -3,7 +3,7 @@ import { CartContext } from '../../context'
 import { Title, Container, GridContainer, Card } from '../../components'
 
 export const CartView = ()=>{
-    const {count, coursesList} = useContext(CartContext)
+    const {count, coursesList, disabled} = useContext(CartContext)
     return (
         <Container>
             { count ? <Title>{count} productos agregados</Title> : <Title>Sin productos</Title> }
@@ -16,6 +16,7 @@ export const CartView = ()=>{
                                 key={index}
                                 image={image}
                                 description={description}
+                                disabled={disabled}
                             />
                         ))
                     }
