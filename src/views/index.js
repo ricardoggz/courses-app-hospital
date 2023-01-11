@@ -1,4 +1,5 @@
 export * from './CartView/CartView'
 export * from './HomeView/HomeView'
 export * from './LoginView/LoginView'
+export * from './VideoView/VideoView'
 export * from './DashboardUserView/DashboardUserView'
