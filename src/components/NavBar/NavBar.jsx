@@ -31,7 +31,10 @@ export const NavBar = ()=>{
                         !user ? 
                         <li><Link to='/login' onClick={showMenu}>Iniciar sesiòn</Link></li>
                         :
+                        <>
+                        <li><Link to='dashboard'onClick={showMenu}>Mi tablero</Link></li>
                         <li onClick={logout}>Cerrar sesión</li>
+                        </>
                     }
                     <li><Link to='/cart' className='cart' onClick={showMenu}><BsCartFill /> Carrito {count}</Link></li>
                 </Ul>

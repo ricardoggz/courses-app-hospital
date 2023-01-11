@@ -23,7 +23,7 @@ export const Login = ()=>{
         response.then(({data}) => {
             if(data[0]){
                 saveUser(data[0])
-                navigate('/dashboard')
+                navigate('/')
             }
         })
         .catch(err =>{ throw new Error(err)})

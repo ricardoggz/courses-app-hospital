@@ -9,10 +9,13 @@ export const HomeView = ()=>{
         url: 'https://api.vimeo.com/me/projects/14457817/videos',
         config: config
     })
-    console.log(data)
+    const user = JSON.parse(localStorage.getItem('user'))
     return (
             <Container>
-                <Title>Nuestros cursos disponibles</Title>
+                {
+                    !user ? <Title>Nuestros cursos disponibles</Title>
+                    : <Title>Bienvenido {user.user_user}, comencemos a aprender</Title>
+                }
                 {
                     loading?
                     <Spinner />
