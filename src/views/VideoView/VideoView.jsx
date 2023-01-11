@@ -1,4 +1,4 @@
-import { Video, Container, Title, Spinner } from '../../components'
+import { Video, Container, Spinner } from '../../components'
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../../hooks'
 
@@ -12,15 +12,16 @@ export const VideoView = ()=>{
         config: config
     })
     return (
-        <>
+        <Container>
             {
-                !data ? <Spinner />
+                loading ? <Spinner />
                 :
-                <Container>
-                    <Title>{data.name}</Title>
-                    <Video src={data.player_embed_url} />
-                </Container>
+                <div className='flex-container'>
+                    <Video
+                        src={data.player_embed_url}
+                    />
+                </div>
             }
-        </>
+        </Container>
     )
 }
