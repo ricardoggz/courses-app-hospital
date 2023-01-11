@@ -10,7 +10,7 @@ import {
     CardButtons
 } from './Card.styled'
 
-export const Card = ({image, description, disabled})=>{
+export const Card = ({image, description, disabled, idVideo})=>{
     const {increment} = useContext(CartContext)
     const addCourse = ()=>{
         increment({image, description})
@@ -23,6 +23,7 @@ export const Card = ({image, description, disabled})=>{
                 <CardDescription>{description}</CardDescription>
                 <CardButtons>
                     <Link to ='/'>Comprar curso</Link>
+                    <Link to ={`video/${idVideo}`}>Ver curso</Link>
                     <button className={`button-cart ${disabled}`} onClick={addCourse}>
                         <BsFillCartPlusFill /> Agregar al carrito
                     </button>
