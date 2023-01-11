@@ -8,11 +8,11 @@ export const UserProvider = ({children})=> {
         localStorage.setItem('user', JSON.stringify(user))
         return setUser(user)
     }
-    const deleteAdmin = ()=>{
+    const deleteUser = ()=>{
         localStorage.removeItem('user')
     }
     return (
-        <UserContext.Provider value={{saveUser, user, deleteAdmin}}>
+        <UserContext.Provider value={{saveUser, user, deleteUser}}>
             { children }
         </UserContext.Provider>
     )
