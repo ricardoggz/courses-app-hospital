@@ -27,7 +27,6 @@ export const HomeView = ()=>{
                                     key={index}
                                     image={course.pictures.base_link}
                                     description={course.name}
-                                    idVideo={course.uri.substring(8, 19)}
                                 />
                             ))
                         }

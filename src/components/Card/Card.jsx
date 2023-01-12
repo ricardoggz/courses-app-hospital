@@ -23,7 +23,7 @@ export const Card = ({image, description, disabled, idVideo})=>{
                 <CardDescription>{description}</CardDescription>
                 <CardButtons>
                     <Link to ='/'>Comprar curso</Link>
-                    <Link to ={`video/${idVideo}`}>Ver curso</Link>
+                    { idVideo ? <Link to ={`video/${idVideo}`}>Ver curso</Link> : <></> }
                     <button className={`button-cart ${disabled}`} onClick={addCourse}>
                         <BsFillCartPlusFill /> Agregar al carrito
                     </button>
