@@ -1,4 +1,12 @@
-import { Container, Card, Title, GridContainer, Spinner } from '../../components'
+import {
+    Container,
+    Card,
+    Title,
+    GridContainer,
+    Spinner,
+    Jumbotron,
+    Footer
+} from '../../components'
 import { useFetch } from '../../hooks'
 
 export const HomeView = ()=>{
@@ -10,7 +18,9 @@ export const HomeView = ()=>{
         config: config
     })
     return (
-            <Container>
+            <>
+                <Jumbotron />
+                <Container>
                  <Title>Nuestros cursos disponibles</Title>
                 {
                     loading?
@@ -28,6 +38,8 @@ export const HomeView = ()=>{
                         }
                     </GridContainer>
                 }
-            </Container>
+                </Container>
+                <Footer />
+            </>
     )
 }
