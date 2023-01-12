@@ -1,10 +1,13 @@
 import { JumbotronWrapper, JumbotronTitles } from "./Jumbotron.styled"
+import logo  from '../../assets/logo.png'
+
 export const Jumbotron = ()=>{
     return (
         <JumbotronWrapper>
             <JumbotronTitles>
+                <img src={logo} />
                 <h1>
-                    Bienvenido a la plataforma de cursos del Hospital Infantil de México
+                    Cursos - Hospital Infantil de México
                 </h1>
             </JumbotronTitles>
         </JumbotronWrapper>

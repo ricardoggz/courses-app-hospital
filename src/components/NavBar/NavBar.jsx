@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { BsCartFill } from 'react-icons/bs'
 import { Header, Nav, Ul, NavButton } from './NavBar.styled'
 import { CartContext, UserContext } from '../../context'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logoheader.svg'
 
 export const NavBar = ()=>{
     const { count } = useContext(CartContext)
@@ -36,7 +36,7 @@ export const NavBar = ()=>{
                         <li onClick={logout}>Cerrar sesión</li>
                         </>
                     }
-                    <li><Link to='/cart' className='cart' onClick={showMenu}><BsCartFill /> Carrito {count}</Link></li>
+                    {/*<li><Link to='/cart' className='cart' onClick={showMenu}><BsCartFill /> Carrito {count}</Link></li>*/}
                 </Ul>
             </Nav>
         </Header>

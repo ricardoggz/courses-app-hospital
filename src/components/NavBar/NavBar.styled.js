@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-    background: var(--color-blue-primary);
+    background: var(--color-green-primary);
     padding: 1rem;
     width:100%;
 `
@@ -10,7 +10,7 @@ export const Nav = styled.nav`
     display:flex;
     justify-content:space-between;
     div img{
-        width:15%;
+        width:40%;
     }
 `
 export const Ul = styled.ul`
