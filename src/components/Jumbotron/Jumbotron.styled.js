@@ -17,6 +17,6 @@ export const JumbotronTitles = styled.div`
     text-align: center;
     width:100%;
     img{
-        width:10%;
+        width:276px;
     }
 `

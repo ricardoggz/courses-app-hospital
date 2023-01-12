@@ -9,8 +9,13 @@ export const Nav = styled.nav`
     align-items:center;
     display:flex;
     justify-content:space-between;
+    div{
+        width:150px;
+        height:50px;
+    }
     div img{
-        width:40%;
+        width:100%;
+        height:100%;
     }
 `
 export const Ul = styled.ul`
@@ -31,7 +36,7 @@ export const Ul = styled.ul`
     }
 
     @media (min-width:240px) and (max-width:880px){
-        background: var(--color-blue-primary);
+        background: var(--color-green-primary);
         gap: 2rem;
         left: 0;
         right: 0;
