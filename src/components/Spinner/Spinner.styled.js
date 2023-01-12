@@ -13,7 +13,7 @@ export const SpinnerLoader =styled.div`
     border-radius: 50%;
     border: 9px solid;
     border-color: #e7e7ea;
-    border-right-color: #255280;
+    border-right-color: var(--color-green-primary);
     animation: spinner-d3wgkg 1s infinite linear;
     @keyframes spinner-d3wgkg {
     to {
