@@ -24,9 +24,15 @@ export const Ul = styled.ul`
     gap:1rem;
     list-style: none;
 
-    li a{
+    li a, button{
         color:var(--color-light-primary);
         text-decoration:none;
+    }
+    li button{
+        background:none;
+        border:none;
+        cursor:pointer;
+        font-size:1rem;
     }
     .cart{
         background:var(--color-light-primary);

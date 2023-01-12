@@ -33,7 +33,7 @@ export const NavBar = ()=>{
                         :
                         <>
                         <li><Link to='dashboard'onClick={showMenu}>Mi tablero</Link></li>
-                        <li onClick={logout}>Cerrar sesión</li>
+                        <li><button onClick={logout}>Cerrar sesión</button></li>
                         </>
                     }
                     {/*<li><Link to='/cart' className='cart' onClick={showMenu}><BsCartFill /> Carrito {count}</Link></li>*/}
