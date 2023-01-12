@@ -23,7 +23,7 @@ export const Login = ()=>{
         response.then(({data}) => {
             if(data[0]){
                 saveUser(data[0])
-                navigate('/')
+                navigate('/dashboard')
             }
         })
         .catch(err =>{ throw new Error(err)})
@@ -41,13 +41,15 @@ export const Login = ()=>{
                         required
                         name='user_user'
                         onChange={onChange}
+                        autoComplete='off'
                         />
                     <label>Contraseña</label>
                     <Input
-                    type='password'
+                        type='password'
                         required
                         name='user_password'
                         onChange={onChange}
+                        autoComplete='off'
                     />
                     <Button>Iniciar sesiòn</Button>
                 </Form>

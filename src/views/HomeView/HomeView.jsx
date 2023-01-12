@@ -1,4 +1,4 @@
-import { NavBar, Container, Card, Title, GridContainer, Spinner } from '../../components'
+import { Container, Card, Title, GridContainer, Spinner } from '../../components'
 import { useFetch } from '../../hooks'
 
 export const HomeView = ()=>{
@@ -9,13 +9,9 @@ export const HomeView = ()=>{
         url: 'https://api.vimeo.com/me/projects/14457817/videos',
         config: config
     })
-    const user = JSON.parse(localStorage.getItem('user'))
     return (
             <Container>
-                {
-                    !user ? <Title>Nuestros cursos disponibles</Title>
-                    : <Title>Bienvenido {user.user_user}, comencemos a aprender</Title>
-                }
+                 <Title>Nuestros cursos disponibles</Title>
                 {
                     loading?
                     <Spinner />
