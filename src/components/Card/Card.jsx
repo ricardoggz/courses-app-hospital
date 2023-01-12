@@ -24,9 +24,9 @@ export const Card = ({image, description, disabled, idVideo})=>{
                 <CardButtons>
                     <Link to ='/'>Comprar curso</Link>
                     { idVideo ? <Link to ={`video/${idVideo}`}>Ver curso</Link> : <></> }
-                    <button className={`button-cart ${disabled}`} onClick={addCourse}>
+                    {/*<button className={`button-cart ${disabled}`} onClick={addCourse}>
                         <BsFillCartPlusFill /> Agregar al carrito
-                    </button>
+                    </button>*/}
                 </CardButtons>
             </CardWrapper>
     )

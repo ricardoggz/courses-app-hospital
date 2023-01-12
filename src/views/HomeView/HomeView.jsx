@@ -23,7 +23,7 @@ export const HomeView = ()=>{
                 <Container>
                  <Title>Cursos - Hospital Infantil de México</Title>
                 {
-                    /*loading?
+                    loading?
                     <Spinner />
                     :
                     <GridContainer>
@@ -36,10 +36,10 @@ export const HomeView = ()=>{
                                 />
                             ))
                         }
-                    </GridContainer>*/
+                    </GridContainer>
                 }
                 </Container>
-                <Footer />
+                {/*<Footer />*/}
             </>
     )
 }

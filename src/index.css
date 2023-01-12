@@ -16,6 +16,7 @@ body{
   --color-light-secondary:#fff;
   --color-dark-primary: #121212;
   --color-green-primary:#0C231E;
+  --color-red-primary:#a42145;
 }
 .flex-container{
   margin:0 auto;
