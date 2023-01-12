@@ -21,9 +21,9 @@ export const HomeView = ()=>{
             <>
                 <Jumbotron />
                 <Container>
-                 <Title>Nuestros cursos disponibles</Title>
+                 <Title>Cursos - Hospital Infantil de México</Title>
                 {
-                    loading?
+                    /*loading?
                     <Spinner />
                     :
                     <GridContainer>
@@ -36,7 +36,7 @@ export const HomeView = ()=>{
                                 />
                             ))
                         }
-                    </GridContainer>
+                    </GridContainer>*/
                 }
                 </Container>
                 <Footer />
