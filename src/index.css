@@ -20,9 +20,9 @@ body{
 }
 .flex-container{
   margin:0 auto;
-  max-width:60%;
+  max-width:50%;
 }
-@media (min-width:240px) and (max-width:880px){
+@media (min-width:240px) and (max-width:1700px){
   .flex-container{
     max-width: 90%;
   }
