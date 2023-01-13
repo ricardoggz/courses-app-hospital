@@ -1,7 +1,11 @@
+import { Title, Container, PaymentForm } from '../../components'
 export const PaymentView = ()=>{
     return(
-        <div>
-            <p>Pagar curso</p>
-        </div>
+            <Container>
+                <Title>Pagar curso</Title>
+                <div className='flex-container'>
+                    <PaymentForm />
+                </div>
+            </Container>
     )
 }

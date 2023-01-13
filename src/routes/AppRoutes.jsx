@@ -16,7 +16,7 @@ export const AppRoutes = ()=>{
             <Route path='/dashboard' element={<DashboardUserView />} />
             <Route path='/cart' element={ <CartView />} />
             <Route path='/video/:id' element={<VideoView />} />
-            <Route path='/payment/:id' element={<PaymentView />}/>
+            <Route path='/payment' element={<PaymentView />}/>
         </Routes>
     )
 }
