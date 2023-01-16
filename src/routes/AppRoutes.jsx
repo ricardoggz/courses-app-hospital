@@ -5,7 +5,8 @@ import {
     DashboardUserView,
     CartView, 
     VideoView,
-    PaymentView
+    PaymentView,
+    RegisterView
 } from '../views'
 
 export const AppRoutes = ()=>{
@@ -17,6 +18,7 @@ export const AppRoutes = ()=>{
             <Route path='/cart' element={ <CartView />} />
             <Route path='/video/:id' element={<VideoView />} />
             <Route path='/payment' element={<PaymentView />}/>
+            <Route path='/register' element={<RegisterView />}/>
         </Routes>
     )
 }
