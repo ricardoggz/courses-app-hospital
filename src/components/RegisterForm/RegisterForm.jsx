@@ -215,7 +215,7 @@ export const RegisterForm = ()=>{
             />
             <RegisterLabel>Teléfono:*</RegisterLabel>
             <RegisterInput
-                type='number'
+                type='text'
                 name='user_phone'
                 required
                 onChange={onChange}
