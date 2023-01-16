@@ -1,11 +1,15 @@
+import {useOnChange} from '../../hooks'
 import { RegisterFormWrapper, RegisterInput, RegisterLabel, RadioInputs } from "./RegisterForm.styled"
 export const RegisterForm = ()=>{
+    const [onChange] = useOnChange()
     return (
         <RegisterFormWrapper>
             <RegisterLabel>Nombre completo:*</RegisterLabel>
             <RegisterInput
                 type='text'
+                onChange={onChange}
                 required
+                name='user_name'
             />
             <RegisterLabel>Título profesional:*</RegisterLabel>
             <RadioInputs>
@@ -14,8 +18,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='medico'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -23,8 +28,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='pasante'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -32,8 +38,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='est-med'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -41,8 +48,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='lic-enf'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -50,8 +58,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='enf-esp'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -59,8 +68,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='est-enf'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -68,8 +78,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='quimico'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -77,8 +88,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='biologo'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -86,8 +98,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='m-en-c'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -95,8 +108,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='psicologo'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -104,8 +118,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='pedagogo'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -113,8 +128,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='profession'
+                        name='user_profession'
                         value='trabajador-social'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -122,7 +138,8 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='text'
                         required
-                        name='profession'
+                        name='user_profession'
+                        onChange={onChange}
                     />
                 </div>
             </RadioInputs>
@@ -133,8 +150,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='institution'
+                        name='user_institution'
                         value='IMSS'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -142,8 +160,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='institution'
+                        name='user_institution'
                         value='SSA'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -151,8 +170,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='institution'
+                        name='user_institution'
                         value='ISSTE'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -160,8 +180,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='institution'
+                        name='user_institution'
                         value='GDF'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -169,8 +190,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='institution'
+                        name='user_institution'
                         value='HIMFG'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -178,34 +200,39 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='institution'
+                        name='user_institution'
                         value='otro'
+                        onChange={onChange}
                     />
                 </div>
             </RadioInputs>
             <RegisterLabel>Cargo:*</RegisterLabel>
             <RegisterInput
                 type='text'
-                name='cargo'
+                name='user_position'
                 required
+                onChange={onChange}
             />
             <RegisterLabel>Teléfono:*</RegisterLabel>
             <RegisterInput
                 type='number'
-                name='telefono'
+                name='user_phone'
                 required
+                onChange={onChange}
             />
             <RegisterLabel>Edad:*</RegisterLabel>
             <RegisterInput
                 type='number'
-                name='edad'
+                name='user_age'
                 required
+                onChange={onChange}
             />
             <RegisterLabel>E-mail:*</RegisterLabel>
             <RegisterInput
                 type='email'
-                name='e-mail'
+                name='user_email'
                 required
+                onChange={onChange}
             />
             <RegisterLabel>¿Es egresado de algún programa del HIMFG?</RegisterLabel>
             <RadioInputs>
