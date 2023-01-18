@@ -9,6 +9,6 @@ export const useOnChange = ()=>{
             [target.name] : target.value
         })
     }
-
-    return [onChange]
+    const onReset = ()=> setInput({})
+    return [onChange, input, onReset]
 }

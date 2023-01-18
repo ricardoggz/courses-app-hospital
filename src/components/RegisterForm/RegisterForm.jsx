@@ -1,15 +1,19 @@
-import {useOnChange} from '../../hooks'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {useOnChange} from '../../hooks'
+import { UserContext } from '../../context'
 import { RegisterFormWrapper, RegisterInput, RegisterLabel, RadioInputs } from "./RegisterForm.styled"
 import { Button } from '../../components'
 
 export const RegisterForm = ()=>{
+    const {saveUser} = useContext(UserContext)
     const navigate = useNavigate()
+    const [onChange, input, onReset] = useOnChange()
     const onSubmit = (evt)=>{
         evt.preventDefault()
+        saveUser(input)
         navigate('/payment')
     }
-    const [onChange] = useOnChange()
     return (
         <RegisterFormWrapper onSubmit={onSubmit}>
             <RegisterLabel>Nombre completo:*</RegisterLabel>
@@ -261,7 +265,7 @@ export const RegisterForm = ()=>{
                 </div>
             </RadioInputs>
             <Button greenPrimary>Continuar</Button>
-            <Button redPrimary type='reset'>Cancelar</Button>
+            <Button redPrimary type='reset' onClick={onReset}>Cancelar</Button>
         </RegisterFormWrapper>
     )
 }
