@@ -1,4 +1,5 @@
-import { PaymentWrapper, PaymentInput, PaymentLabel, PaymentButtons } from "./Payment.styled"
+import { PaymentWrapper, PaymentInput, PaymentLabel } from "./Payment.styled"
+import { Button } from '../../components'
 export const PaymentForm = ()=>{
     return (
         <PaymentWrapper>
@@ -66,10 +67,8 @@ export const PaymentForm = ()=>{
                 type='email'
                 required
             />
-            <PaymentButtons>
-                <button className="btn-success">Realizar pago</button>
-                <button className="btn-unsuccess" type="reset">Cancelar</button>
-            </PaymentButtons>
+                <Button greenPrimary>Realizar pago</Button>
+                <Button redPrimary>Cancelar</Button>
         </PaymentWrapper>
     )
 }

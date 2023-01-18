@@ -1,11 +1,17 @@
 import {useOnChange} from '../../hooks'
+import { useNavigate } from 'react-router-dom'
 import { RegisterFormWrapper, RegisterInput, RegisterLabel, RadioInputs } from "./RegisterForm.styled"
 import { Button } from '../../components'
 
 export const RegisterForm = ()=>{
+    const navigate = useNavigate()
+    const onSubmit = (evt)=>{
+        evt.preventDefault()
+        navigate('/payment')
+    }
     const [onChange] = useOnChange()
     return (
-        <RegisterFormWrapper>
+        <RegisterFormWrapper onSubmit={onSubmit}>
             <RegisterLabel>Nombre completo:*</RegisterLabel>
             <RegisterInput
                 type='text'
@@ -139,7 +145,6 @@ export const RegisterForm = ()=>{
                     <RegisterLabel>OTRO</RegisterLabel>
                     <RegisterInput
                         type='text'
-                        required
                         name='user_profession'
                         onChange={onChange}
                     />
@@ -243,7 +248,7 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='si'
+                        name='user_egresado'
                     />
                 </div>
                 <div>
@@ -251,7 +256,7 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='no'
+                        name='user_egresado'
                     />
                 </div>
             </RadioInputs>
