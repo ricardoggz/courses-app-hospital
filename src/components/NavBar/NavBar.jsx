@@ -28,13 +28,13 @@ export const NavBar = ()=>{
                 <Ul open={isOpen}>
                     <li><Link to='/' onClick={showMenu}>Inicio</Link></li>
                     {
-                        !user ? 
+                        /*!user ? 
                         <li><Link to='/login' onClick={showMenu}>Iniciar sesiòn</Link></li>
                         :
                         <>
                         <li><Link to='dashboard'onClick={showMenu}>Mi tablero</Link></li>
                         <li><button onClick={logout}>Cerrar sesión</button></li>
-                        </>
+                        </>*/
                     }
                     {/*<li><Link to='/cart' className='cart' onClick={showMenu}><BsCartFill /> Carrito {count}</Link></li>*/}
                 </Ul>
