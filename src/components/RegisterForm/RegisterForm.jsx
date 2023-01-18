@@ -1,5 +1,7 @@
 import {useOnChange} from '../../hooks'
 import { RegisterFormWrapper, RegisterInput, RegisterLabel, RadioInputs } from "./RegisterForm.styled"
+import { Button } from '../../components'
+
 export const RegisterForm = ()=>{
     const [onChange] = useOnChange()
     return (
@@ -253,6 +255,8 @@ export const RegisterForm = ()=>{
                     />
                 </div>
             </RadioInputs>
+            <Button greenPrimary>Continuar</Button>
+            <Button redPrimary type='reset'>Cancelar</Button>
         </RegisterFormWrapper>
     )
 }
