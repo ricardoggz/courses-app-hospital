@@ -14,9 +14,11 @@ export const RegisterForm = ()=>{
     const onSubmit = async(evt)=>{
         evt.preventDefault()
         saveUser(input)
-        navigate('/payment')
         try {
             const resp = await axios.post(api, input)
+            if(resp.status === 200){
+                navigate('/payment')
+            }
             return resp
         } catch (error) {
             throw new Error(error)
