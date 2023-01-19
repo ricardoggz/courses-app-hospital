@@ -260,7 +260,9 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='user_egresado'
+                        name='user_recent'
+                        value='si'
+                        onChange={onChange}
                     />
                 </div>
                 <div>
@@ -268,10 +270,51 @@ export const RegisterForm = ()=>{
                     <RegisterInput
                         type='radio'
                         required
-                        name='user_egresado'
+                        name='user_recent'
+                        value='no'
+                        onChange={onChange}
                     />
                 </div>
             </RadioInputs>
+            {
+                input.user_recent === 'si'
+                ?
+                <>
+                    <RegisterLabel>¿Cuál?</RegisterLabel>
+                    <RadioInputs>
+                        <div>
+                            <RegisterLabel>Especialidad</RegisterLabel>
+                            <RegisterInput
+                                type='radio'
+                                required
+                                name='user_course_recent'
+                                value='Especialidad'
+                                onChange={onChange}
+                            />
+                        </div>
+                        <div>
+                            <RegisterLabel>
+                                Curso de posgrado para médicos especialistas
+                            </RegisterLabel>
+                            <RegisterInput
+                                type='radio'
+                                required
+                                name='user_course_recent'
+                                value='Curso de posgrado para médicos especialistas'
+                                onChange={onChange}
+                            />
+                        </div>
+                    </RadioInputs>
+                    <RegisterLabel>Año de egreso</RegisterLabel>
+                    <RegisterInput
+                        type='number'
+                        onChange={onChange}
+                        name='user_nationality'
+                    />
+                </>
+                :
+                <></>
+            }
             <Button greenPrimary>Continuar</Button>
             <Button redPrimary type='reset' onClick={onReset}>Cancelar</Button>
         </RegisterFormWrapper>
