@@ -22,7 +22,7 @@ export const HomeView = ()=>{
             <>
                 <Jumbotron />
                 <Container>
-                 <Title>Nuestra oferta educativa</Title>
+                 <Title>Nuestra oferta educativa - 2023</Title>
                 {
                     loading?
                     <Spinner />
