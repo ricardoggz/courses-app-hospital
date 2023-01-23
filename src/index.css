@@ -5,17 +5,18 @@
   padding:0;
 }
 body{
-  background:var(--color-light-secondary);
+  background:var(--color-light-primary);
   color:var(--color-dark-primary);
   font-family: 'Montserrat', sans-serif;
 }
 :root{
   --color-blue-primary:#255280;
   --color-blue-secondary:#6bbad6;
-  --color-light-primary:#efefef;
-  --color-light-secondary:#fff;
+  --color-light-primary:#fcfcfc;
+  --color-light-secondary:#646464;
   --color-dark-primary: #121212;
   --color-green-primary:#0C231E;
+  --color-green-secondary:#13322b;
   --color-red-primary:#a42145;
 }
 .flex-container{

@@ -10,23 +10,40 @@ import {
     CardButtons
 } from './Card.styled'
 
-export const Card = ({image, description, disabled, idVideo})=>{
+export const Card = ({image, description, name, price, instructor, startDate, finishDate, place, modality})=>{
     const {increment} = useContext(CartContext)
     const addCourse = ()=>{
         increment({image, description})
     }
     return (
             <CardWrapper>
-                <CardImage>
-                    <img src={image} alt="" />
-                </CardImage>
-                <CardDescription>{description}</CardDescription>
+                { image ? 
+                    <CardImage>
+                        <img src={image} alt="" />
+                    </CardImage>
+                    :
+                    <></>
+                }
+                <CardDescription>
+                    <h4>{name}</h4>
+                    <p>
+                        <span>Impartido por: </span>{instructor}
+                    </p>
+                    <p>
+                        <span>Modalidad: </span>{modality}
+                    </p>
+                    <p>
+                        <span>Fecha: </span>{startDate}
+                    </p>
+                    <p>
+                        <span>SEDE: </span> {place}
+                    </p>
+                    <p>
+                        <span>Precio del curso: </span>${price} MXN
+                    </p>
+                </CardDescription>
                 <CardButtons>
-                    <Link to ='/register'>Comprar curso</Link>
-                    { /*idVideo ? <Link to ={`video/${idVideo}`}>Ver curso</Link> : <></>*/ }
-                    {/*<button className={`button-cart ${disabled}`} onClick={addCourse}>
-                        <BsFillCartPlusFill /> Agregar al carrito
-                    </button>*/}
+                    <Link to ='/register'>Inscribirme</Link>
                 </CardButtons>
             </CardWrapper>
     )

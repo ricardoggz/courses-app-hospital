@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const CardWrapper = styled.div`
     align-items:center;
+    box-shadow:1px 2px 10px #0003;
     display:flex;
     flex-direction: column;
     gap:1rem;
@@ -19,10 +20,25 @@ export const CardImage = styled.figure`
     }
 `
 export const CardDescription = styled.div`
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
     height:100%;
     line-height: 2rem;
-    text-align:justify;
     width:100%;
+    h4{
+        background: var(--color-green-primary);
+        color:var(--color-light-primary);
+        padding:0.5rem;
+        text-align: center;
+    }
+    span{
+        color:var(--color-green-secondary);
+    }
+    p{
+        color:var(--color-light-secondary);
+        font-style: italic;
+    }
 `
 export const CardButtons = styled.div`
     display:flex;
@@ -34,7 +50,7 @@ export const CardButtons = styled.div`
     a, button{
         background: var(--color-red-primary);
         border-radius:30px;
-        color:var(--color-light-secondary);
+        color:var(--color-light-primary);
         padding: 0.5rem;
         text-align:center;
         text-decoration:none;
