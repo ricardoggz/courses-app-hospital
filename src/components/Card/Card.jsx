@@ -26,21 +26,23 @@ export const Card = ({image, description, name, price, instructor, startDate, fi
                 }
                 <CardDescription>
                     <h4>{name}</h4>
-                    <p>
+                    
+                        <p>
                         <span>Impartido por: </span>{instructor}
-                    </p>
-                    <p>
-                        <span>Modalidad: </span>{modality}
-                    </p>
-                    <p>
-                        <span>Fecha: </span>{startDate}
-                    </p>
-                    <p>
-                        <span>SEDE: </span> {place}
-                    </p>
-                    <p>
-                        <span>Precio del curso: </span>${price} MXN
-                    </p>
+                        </p>
+                        <p>
+                            <span>Modalidad: </span>{modality}
+                        </p>
+                        <p>
+                            <span>Fecha: </span>{startDate}
+                        </p>
+                        <p>
+                            <span>SEDE: </span> {place}
+                        </p>
+                        <p>
+                            <span>Precio del curso: </span>${price} MXN
+                        </p>
+                    
                 </CardDescription>
                 <CardButtons>
                     <Link to ='/register'>Inscribirme</Link>

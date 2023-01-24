@@ -10,12 +10,13 @@ export const CardWrapper = styled.div`
     padding:1rem;
 `
 export const CardImage = styled.figure`
-    height:200px;
+    height:300px;
     width:100%;
     img{
         border-radius:10px;
         height:100%;
         object-fit: cover;
+        object-position:top;
         width:100%;
     }
 `
@@ -27,9 +28,6 @@ export const CardDescription = styled.div`
     line-height: 2rem;
     width:100%;
     h4{
-        background: var(--color-green-primary);
-        color:var(--color-light-primary);
-        padding:0.5rem;
         text-align: center;
     }
     span{
@@ -48,7 +46,7 @@ export const CardButtons = styled.div`
     align-items: end;
     width:100%;
     a, button{
-        background: var(--color-red-primary);
+        background: var(--color-green-primary);
         border-radius:30px;
         color:var(--color-light-primary);
         padding: 0.5rem;
