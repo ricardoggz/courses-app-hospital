@@ -15,9 +15,8 @@ export const HomeView = ()=>{
     };
     const [loading, data] = useFetch({
         //url: 'https://api.vimeo.com/me/projects/14457817/videos',
-        url: 'http://localhost:3030/api/courses/all-courses'
+        url: `${import.meta.env.VITE_BASE_URL_API}api/courses/all-courses`
     })
-    console.log(data)
     return (
             <>
                 <Jumbotron />
