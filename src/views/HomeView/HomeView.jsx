@@ -34,7 +34,6 @@ export const HomeView = ()=>{
                                     name={course.course_name}
                                     price={course.course_price}
                                     startDate={course.course_date}
-                                    instructor={course.course_instructor}
                                     place={course.course_place}
                                     modality={course.course_modality}
                                     image={course.course_file}
