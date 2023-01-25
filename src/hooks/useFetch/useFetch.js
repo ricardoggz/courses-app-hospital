@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 export const useFetch = ({url, config})=>{
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState(null)
     const getData = async()=>{
         try {
-            const response = await fetch(url, config)
-            const json = await response.json()
-            setLoading(false)
-            setData(json)
+            const response = await axios.get(url, config)
+            if(response.data){
+                setLoading(false)
+            }
+            return setData(response)
         } catch (error) {
-            console.log(error)
+            throw new Error(error)
         }
     }
     useEffect(()=>{

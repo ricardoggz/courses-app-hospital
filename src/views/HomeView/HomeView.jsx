@@ -28,7 +28,7 @@ export const HomeView = ()=>{
                     :
                     <GridContainer>
                         {
-                            data.map((course, index)=>(
+                            data.data.map((course, index)=>(
                                 <Card
                                     key={index}
                                     name={course.course_name}
