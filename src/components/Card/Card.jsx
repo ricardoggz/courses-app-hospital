@@ -34,7 +34,7 @@ export const Card = ({image, name, price, startDate, place, modality})=>{
                     
                 </CardDescription>
                 <CardButtons>
-                    <Link to ='/register'>Inscribirme</Link>
+                    <Link to ='/'>Consultar</Link>
                 </CardButtons>
             </CardWrapper>
     )
