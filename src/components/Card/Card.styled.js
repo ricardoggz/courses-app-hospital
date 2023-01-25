@@ -12,6 +12,10 @@ export const CardWrapper = styled.div`
 export const CardImage = styled.figure`
     height:300px;
     width:100%;
+    span{
+        height:100%;
+        width:100%;
+    }
     img{
         border-radius:10px;
         height:100%;

@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import {
     CardWrapper,
     CardImage,
@@ -12,7 +14,7 @@ export const Card = ({image, name, price, startDate, place, modality})=>{
             <CardWrapper>
                 { image ? 
                     <CardImage>
-                        <img src={image} alt="" />
+                        <LazyLoadImage src={image} alt="" effect='blur'/>
                     </CardImage>
                     :
                     <></>
