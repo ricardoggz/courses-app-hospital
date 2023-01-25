@@ -33,7 +33,12 @@ export const HomeView = ()=>{
                 <Jumbotron />
                 <Container>
                  <Title>Nuestra oferta educativa - 2023</Title>
-                 <ul>
+                {
+                    loading?
+                    <Spinner />
+                    :
+                    <>
+                    <ul>
                     {months.map(month=>(
                         <li
                             key={month.id}
@@ -42,11 +47,7 @@ export const HomeView = ()=>{
                             {month.name}
                         </li>
                     ))}
-                 </ul>
-                {
-                    loading?
-                    <Spinner />
-                    :
+                    </ul>
                     <GridContainer>
                         {
                             filteredData.map((course, index)=>(
@@ -62,6 +63,7 @@ export const HomeView = ()=>{
                             ))
                         }
                     </GridContainer>
+                    </>
                 }
                 </Container>
                 {/*<Footer />*/}
