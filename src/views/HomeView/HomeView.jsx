@@ -47,6 +47,7 @@ export const HomeView = ()=>{
                         <li
                             key={month.id}
                             onClick={()=>setSelectedTab(month)}
+                            className={selectedTab.id === month.id ? 'selected' : ''}
                         >
                             {month.name}
                         </li>
