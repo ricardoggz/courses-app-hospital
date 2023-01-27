@@ -46,7 +46,7 @@ export const CardButtons = styled.div`
     display:flex;
     flex-direction:column;
     gap:0.5rem;
-    justify-content: end;
+    justify-content: center;
     align-items: end;
     width:100%;
     a, button{
@@ -56,7 +56,7 @@ export const CardButtons = styled.div`
         padding: 0.5rem;
         text-align:center;
         text-decoration:none;
-        width:50%;
+        width:100%;
     }
     .button-cart{
         background:var(--color-blue-secondary);
