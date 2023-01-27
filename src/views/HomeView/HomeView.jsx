@@ -59,7 +59,7 @@ export const HomeView = ()=>{
                     </>
                 }
                 </Container>
-                {/*<Footer />*/}
+                <Footer />
             </>
     )
 }
