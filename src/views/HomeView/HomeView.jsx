@@ -52,6 +52,7 @@ export const HomeView = ()=>{
                                     place={course.course_place}
                                     modality={course.course_modality}
                                     image={course.course_file}
+                                    pdf={course.course_pdf}
                                 />
                             ))
                         }

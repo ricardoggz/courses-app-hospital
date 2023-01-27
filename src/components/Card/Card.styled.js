@@ -8,6 +8,11 @@ export const CardWrapper = styled.div`
     gap:1rem;
     height:100%;
     padding:1rem;
+    .disabled-link{
+        color:var(--color-red-primary);
+        font-size: 0.9rem;
+        font-style: italic;
+    }
 `
 export const CardImage = styled.figure`
     height:300px;
@@ -57,13 +62,5 @@ export const CardButtons = styled.div`
         text-align:center;
         text-decoration:none;
         width:100%;
-    }
-    .button-cart{
-        background:var(--color-blue-secondary);
-        border:none;
-        color:var(--color-light-primary);
-    }
-    .disabled{
-        display:none;
     }
 `

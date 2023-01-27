@@ -9,7 +9,7 @@ import {
     CardButtons
 } from './Card.styled'
 
-export const Card = ({image, name, price, startDate, place, modality})=>{
+export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
     return (
             <CardWrapper>
                 { image ? 
@@ -37,9 +37,14 @@ export const Card = ({image, name, price, startDate, place, modality})=>{
                         </p>
                     
                 </CardDescription>
-                <CardButtons>
-                    <Link to ='/'>Consultar</Link>
-                </CardButtons>
+                {
+                    pdf ?
+                    <CardButtons>
+                        <a href={pdf} target={'_blank'}>Consultar informaciòn</a>
+                    </CardButtons>
+                    :
+                    <p className='disabled-link'>Informaciòn no disponible</p>
+                }
             </CardWrapper>
     )
 }
