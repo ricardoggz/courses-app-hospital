@@ -25,7 +25,7 @@ export const MonthBarWrapper = styled.ul`
         background:var(--color-green-primary);
         color:var(--color-light-primary);
     }
-    @media (min-width:240px) and (max-width:880px){
+    @media (min-width:240px) and (max-width:1800px){
         grid-template-columns: repeat(3,1fr);
     }
 `
