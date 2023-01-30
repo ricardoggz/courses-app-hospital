@@ -41,6 +41,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                     pdf ?
                     <CardButtons>
                         <a href={pdf} target={'_blank'}>Consultar informaciòn</a>
+                        <Link to='/register'>Inscribirme</Link>
                     </CardButtons>
                     :
                     <p className='disabled-link'>Informaciòn no disponible</p>
