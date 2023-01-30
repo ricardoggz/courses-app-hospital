@@ -45,9 +45,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                 <Modal
                     open={open}
                     onClose={onCloseModal}
-                    classNames={{
-                        modal: 'modal',
-                    }}
+                    center= {true}
                     >
                    <ModalContent>
                    { image ? 
