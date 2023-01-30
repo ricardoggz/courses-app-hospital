@@ -6,7 +6,7 @@ export const Jumbotron = ()=>{
         <JumbotronWrapper>
             <JumbotronTitles>
                 <h1>Hospital Infantil de México Federico Gómez</h1>
-                <a href="/">Ver oferta educativa</a>
+                <a href="#oferta-educativa">Ver oferta educativa</a>
             </JumbotronTitles>
         </JumbotronWrapper>
     )

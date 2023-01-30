@@ -9,6 +9,9 @@ body{
   color:var(--color-dark-primary);
   font-family: 'Montserrat', sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 :root{
   --color-blue-primary:#255280;
   --color-blue-secondary:#6bbad6;
