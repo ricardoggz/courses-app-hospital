@@ -32,11 +32,12 @@ export const CardImage = styled.figure`
 export const CardDescription = styled.div`
     display:flex;
     flex-direction: column;
-    gap:0.5rem;
+    gap:1rem;
     height:100%;
     line-height: 2rem;
     width:100%;
     h4{
+        color:var(--color-green-secondary);
         text-align: center;
     }
     span{
@@ -57,6 +58,7 @@ export const CardButtons = styled.div`
         background: var(--color-green-primary);
         border-radius:30px;
         color:var(--color-light-primary);
+        cursor:pointer;
         padding: 0.5rem;
         text-align:center;
         text-decoration:none;
@@ -66,4 +68,8 @@ export const CardButtons = styled.div`
     @media(min-width:240px) and (max-width:1900px){
         flex-direction: column;
     }
+`
+export const ModalContent = styled.div`
+    padding:1rem;
+    width:100%;
 `
