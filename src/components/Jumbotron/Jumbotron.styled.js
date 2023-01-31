@@ -25,10 +25,27 @@ export const JumbotronTitles = styled.div`
         width:276px;
     }
     a{
-        background-color: var(--color-light-primary);
-        border-radius:30px;
+        background:var(--color-light-primary);
+        border-radius: 8px;
         color:var(--color-green-primary);
-        padding:1rem;
+        padding:0.5rem;
         text-decoration:none;
+        width:30%;
+    }
+    .jumbotron-buttons{
+        align-items: center;
+        width:100%;
+        display:flex;
+        gap:1rem;
+        justify-content: center;
+    }
+
+    @media (min-width:240px) and (max-width:1500px){
+        .jumbotron-buttons{
+            flex-direction: column;
+        }
+        a{
+            width: 100%;
+        }
     }
 `
