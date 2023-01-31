@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Modal } from 'react-responsive-modal'
-import 'react-responsive-modal/styles.css'
+import Modal from 'react-awesome-modal'
 import {
     CardWrapper,
     CardImage,
@@ -43,9 +42,11 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                     <p className='disabled-link'>Informaciòn no disponible</p>
                 }
                 <Modal
-                    open={open}
-                    onClose={onCloseModal}
-                    center= {true}
+                    visible={open}
+                    width="600"
+                    height="720"
+                    effect="fadeInRight"
+                    onClickAway={onCloseModal}
                     >
                    <ModalContent>
                    { image ? 

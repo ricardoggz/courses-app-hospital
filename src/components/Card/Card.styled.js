@@ -50,6 +50,7 @@ export const CardDescription = styled.div`
 `
 export const CardButtons = styled.div`
     display:flex;
+    flex-direction: column;
     gap:0.5rem;
     justify-content: center;
     align-items: end;
@@ -63,10 +64,6 @@ export const CardButtons = styled.div`
         text-align:center;
         text-decoration:none;
         width:100%;
-    }
-
-    @media(min-width:240px) and (max-width:1900px){
-        flex-direction: column;
     }
 `
 export const ModalContent = styled.div`
