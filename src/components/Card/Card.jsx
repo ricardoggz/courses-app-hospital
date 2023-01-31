@@ -43,8 +43,8 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                 }
                 <Modal
                     visible={open}
-                    width="600"
-                    height="720"
+                    width="1000"
+                    height="650"
                     effect="fadeInRight"
                     onClickAway={onCloseModal}
                     >
@@ -73,7 +73,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                             <span>Precio del curso: </span>${price} MXN
                         </p>
                         <CardButtons>
-                            <Link to='/register'>Inscribirme</Link>
+                            {/*<Link to='/register'>Inscribirme</Link>*/}
                             <a href={pdf} target={'_blank'}>Ver programa</a>
                         </CardButtons>
                     </CardDescription>
