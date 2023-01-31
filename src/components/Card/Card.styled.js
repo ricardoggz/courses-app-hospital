@@ -47,6 +47,11 @@ export const CardDescription = styled.div`
         color:var(--color-light-secondary);
         font-style: italic;
     }
+    .course-free{
+        color:var(--color-blue-secondary);
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
 `
 export const CardButtons = styled.div`
     display:flex;

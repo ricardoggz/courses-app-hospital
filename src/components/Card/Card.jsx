@@ -69,9 +69,15 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                         <p>
                             <span>SEDE: </span> {place}
                         </p>
+                        {
+                        price == '0'
+                        ?
+                        <p className='course-free'>Gratuito</p>
+                        :
                         <p>
                             <span>Precio del curso: </span>${price} MXN
                         </p>
+                        }
                         <CardButtons>
                             {/*<Link to='/register'>Inscribirme</Link>*/}
                             <a href={pdf} target={'_blank'}>Ver programa</a>
