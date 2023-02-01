@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import hero_bg from '../../assets/banner-jumbotron.jpg'
 export const JumbotronWrapper = styled.section`
     align-items:center ;
-    background: url(${hero_bg}) no-repeat;
+    background: url('https://hospitalinfantildemexicofedericogomez.mx/wp-content/uploads/2023/02/banner-jumbotron-scaled.jpg') no-repeat;
     background-position: center;
     background-size:cover;
     display:flex;
