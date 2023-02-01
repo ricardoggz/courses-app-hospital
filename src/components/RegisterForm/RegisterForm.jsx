@@ -1,19 +1,15 @@
-import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import {useOnChange} from '../../hooks'
-import { UserContext } from '../../context'
 import { RegisterFormWrapper, RegisterInput, RegisterLabel, RadioInputs } from "./RegisterForm.styled"
 import { Button } from '../../components'
 
 export const RegisterForm = ()=>{
-    const {saveUser} = useContext(UserContext)
     const navigate = useNavigate()
     const [onChange, input, onReset] = useOnChange()
     const api = 'http://localhost:3030/api/auth/create-user'
     const onSubmit = async(evt)=>{
         evt.preventDefault()
-        saveUser(input)
         try {
             const resp = await axios.post(api, input)
             if(resp.status === 200){

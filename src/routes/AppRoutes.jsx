@@ -3,9 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Spinner, Container } from '../components'
 import {
     LoginView,
-    //HomeView,
     DashboardUserView,
-    CartView, 
     VideoView,
     PaymentView,
     RegisterView
@@ -26,7 +24,6 @@ export const AppRoutes = ()=>{
             }/>
             <Route path='/login' element={<LoginView />} />
             <Route path='/dashboard' element={<DashboardUserView />} />
-            <Route path='/cart' element={ <CartView />} />
             <Route path='/video/:id' element={<VideoView />} />
             <Route path='/payment' element={<PaymentView />}/>
             <Route path='/register' element={<RegisterView />}/>

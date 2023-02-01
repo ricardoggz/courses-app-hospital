@@ -1,14 +1,12 @@
-import { useState, useContext } from 'react'
+/*import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components'
 import { Form, Input, LoginWrapper, LoginImage } from './Login.styled'
 import logo from '../../assets/logo.png'
 import { login } from '../../services'
-import { UserContext } from '../../context'
 
 export const Login = ()=>{
     const navigate = useNavigate()
-    const { saveUser } = useContext(UserContext)
     const [input, setInput] = useState(null);
     const onChange = (evt)=>{
         const {target} = evt
@@ -55,4 +53,4 @@ export const Login = ()=>{
                 </Form>
             </LoginWrapper>
     )
-}
+}*/
