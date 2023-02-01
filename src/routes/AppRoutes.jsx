@@ -1,7 +1,9 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { Spinner, Container } from '../components'
 import {
     LoginView,
-    HomeView,
+    //HomeView,
     DashboardUserView,
     CartView, 
     VideoView,
@@ -9,10 +11,19 @@ import {
     RegisterView
 } from '../views'
 
+const HomeView = lazy(()=> {
+    return new Promise((resolve)=>{
+        setTimeout(()=> resolve(import('../views/HomeView/HomeView')), 500)
+    })
+})
 export const AppRoutes = ()=>{
     return (
         <Routes>
-            <Route path='/' element={<HomeView />}/>
+            <Route path='/' element={
+                <Suspense fallback={<Container><Spinner /></Container>}>
+                    <HomeView />
+                </Suspense>
+            }/>
             <Route path='/login' element={<LoginView />} />
             <Route path='/dashboard' element={<DashboardUserView />} />
             <Route path='/cart' element={ <CartView />} />

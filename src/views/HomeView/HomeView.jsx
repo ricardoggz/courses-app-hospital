@@ -12,7 +12,7 @@ import {
 } from '../../components'
 import { useFetch } from '../../hooks'
 
-export const HomeView = ()=>{
+const HomeView = ()=>{
     const [selectedTab, setSelectedTab] = useState(months[0]);
     const [loading, data] = useFetch({
         url: `${import.meta.env.VITE_BASE_URL_API}api/courses/all-courses`
@@ -64,3 +64,5 @@ export const HomeView = ()=>{
             </>
     )
 }
+
+export default HomeView
