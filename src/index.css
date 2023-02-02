@@ -24,15 +24,16 @@ html{
 }
 .flex-container{
   margin:0 auto;
-  max-width:50%;
+  max-width:1200px;
+  width:70%;
 }
 @media (min-width:240px) and (max-width:1000px){
   .flex-container{
-    max-width: 90%;
+    width:90%;
   }
 }
 @media(min-width:1200px){
   .flex-container{
-    max-width: 70%;
+    width: 70%;
   }
 }
