@@ -44,7 +44,7 @@ export const JumbotronTitles = styled.div`
             flex-direction: column;
         }
         a{
-            width: 100%;
+            width: 70%;
         }
     }
 `
