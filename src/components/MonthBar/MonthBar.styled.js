@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const MonthBarWrapper = styled.ul`
     border: 0.5px solid var(--color-green-secondary);
     display:grid;
-    grid-template-columns:repeat(12,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:1rem;
     justify-content: space-between;
     list-style:none;
