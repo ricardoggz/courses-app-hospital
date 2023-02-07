@@ -31,16 +31,11 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                 <CardDescription>
                     <h4>{name}</h4>
                 </CardDescription>
-                {
-                    pdf ?
                     <CardButtons>
                        <button onClick={onOpenModal}>
                             Cosultar informaciòn
                         </button>
                     </CardButtons>
-                    :
-                    <p className='disabled-link'>Informaciòn no disponible</p>
-                }
                 <Modal
                     visible={open}
                     height="700"
@@ -78,8 +73,13 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                         </p>
                         }
                         <CardButtons>
-                            <Link to='/register'>Inscripción online</Link>
-                            <a href={pdf} target={'_blank'}>Ver programa</a>
+                            {/*<Link to='/register'>Inscripción online</Link>*/}
+                            {
+                            pdf ?
+                                <a href={pdf} target={'_blank'}>Ver programa</a>
+                                :
+                                <p className='disabled-link'>Programa no disponible</p>
+                            }
                         </CardButtons>
                     </CardDescription>
                    </ModalContent>

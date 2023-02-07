@@ -12,6 +12,8 @@ export const CardWrapper = styled.div`
         color:var(--color-red-primary);
         font-size: 0.9rem;
         font-style: italic;
+        text-align: center;
+        width:100%;
     }
 `
 export const CardImage = styled.figure`
