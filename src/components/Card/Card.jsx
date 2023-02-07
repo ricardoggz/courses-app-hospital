@@ -78,7 +78,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                         </p>
                         }
                         <CardButtons>
-                            <Link to='/register'>Inscripción online</Link>
+                            {/*<Link to='/register'>Inscripción online</Link>*/}
                             <a href={pdf} target={'_blank'}>Ver programa</a>
                         </CardButtons>
                     </CardDescription>
