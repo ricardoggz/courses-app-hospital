@@ -24,7 +24,7 @@ const HomeView = ()=>{
             <>
                 <Jumbotron />
                 <Container>
-                 <Title>Nuestra oferta educativa - 2023</Title>
+                 <Title>Oferta académica - 2023</Title>
                 {
                     loading?
                     <Spinner />
