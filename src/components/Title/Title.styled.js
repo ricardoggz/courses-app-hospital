@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const H1 = styled.h1`
-    font-size: 2rem;
-    color: var(--color-dark-primary);
+    color: var(--color-green-secondary);
     padding-bottom: 5rem;
     text-align:center;
 `
