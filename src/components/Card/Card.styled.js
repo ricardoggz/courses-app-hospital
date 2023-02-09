@@ -7,7 +7,6 @@ export const CardWrapper = styled.div`
     flex-direction: column;
     gap:1rem;
     height:100%;
-    padding:1rem;
     .disabled-link{
         color:var(--color-red-primary);
         font-size: 0.9rem;
@@ -17,26 +16,24 @@ export const CardWrapper = styled.div`
     }
 `
 export const CardImage = styled.figure`
-    height:300px;
+    height:100%;
     width:100%;
     span{
-        height:100%;
+        height:250px;
         width:100%;
     }
     img{
-        border-radius:10px;
         height:100%;
-        object-fit: cover;
-        object-position:top;
+        object-fit:cover;
+        object-position: top;
         width:100%;
     }
 `
 export const CardDescription = styled.div`
     display:flex;
     flex-direction: column;
-    gap:1rem;
+    gap:0.8rem;
     height:100%;
-    line-height: 2rem;
     width:100%;
     h4{
         color:var(--color-green-secondary);
@@ -62,6 +59,7 @@ export const CardButtons = styled.div`
     justify-content: center;
     align-items: end;
     width:100%;
+    padding:0.5rem;
     a, button{
         background: var(--color-green-primary);
         border-radius:30px;
@@ -74,6 +72,18 @@ export const CardButtons = styled.div`
     }
 `
 export const ModalContent = styled.div`
+    .close-modal{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .close-modal button{
+        background: var(--color-red-primary);
+        border:none;
+        color:var(--color-light-primary);
+        display:flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
     padding:1rem;
     width:100%;
 `

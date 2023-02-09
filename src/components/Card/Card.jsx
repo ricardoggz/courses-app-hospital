@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Modal from 'react-awesome-modal'
+import { FaTimes } from 'react-icons/fa'
 import {
     CardWrapper,
     CardImage,
@@ -38,11 +39,16 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                     </CardButtons>
                 <Modal
                     visible={open}
-                    height="700"
+                    height="600"
                     effect="fadeInRight"
                     onClickAway={onCloseModal}
                     >
                    <ModalContent>
+                    <div className='close-modal'>
+                        <button onClick={onCloseModal}>
+                            <FaTimes />
+                        </button>
+                    </div>
                    { image ? 
                     <CardImage>
                         <LazyLoadImage src={image} alt="" effect='blur'/>
