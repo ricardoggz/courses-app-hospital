@@ -27,6 +27,9 @@ export const JumbotronTitles = styled.div`
         text-decoration:none;
         width:30%;
     }
+    h1{
+        font-size: 40px;
+    }
     .jumbotron-buttons{
         align-items: center;
         width:100%;

@@ -2,9 +2,6 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Spinner, Container } from '../components'
 import {
-    LoginView,
-    DashboardUserView,
-    VideoView,
     PaymentView,
     RegisterView
 } from '../views'
@@ -22,11 +19,8 @@ export const AppRoutes = ()=>{
                     <HomeView />
                 </Suspense>
             }/>
-            <Route path='/login' element={<LoginView />} />
-            <Route path='/dashboard' element={<DashboardUserView />} />
-            <Route path='/video/:id' element={<VideoView />} />
-            <Route path='/payment' element={<PaymentView />}/>
-            <Route path='/register' element={<RegisterView />}/>
+            {/*<Route path='/payment' element={<PaymentView />}/>
+            <Route path='/register' element={<RegisterView />}/>*/}
         </Routes>
     )
 }
