@@ -5,24 +5,20 @@ export const JumbotronWrapper = styled.section`
     background-position: center;
     background-size:cover;
     display:flex;
-    height:50vh;
     width:100%;
 `
 export const JumbotronTitles = styled.div`
-    background: #0008;
+    background: #0005;
     color:var(--color-light-primary);
-    font-size:1.4rem;
     align-items: center;
     display:flex;
     flex-direction:column;
     gap:1.5rem;
     justify-content: center;
+    padding: 9rem 0;
     text-align: center;
     width:100%;
     height:100%;
-    img{
-        width:276px;
-    }
     a{
         background:var(--color-light-primary);
         border-radius: 8px;
@@ -39,7 +35,7 @@ export const JumbotronTitles = styled.div`
         justify-content: center;
     }
 
-    @media (min-width:240px) and (max-width:1500px){
+    @media (min-width:240px) and (max-width:900px){
         .jumbotron-buttons{
             flex-direction: column;
         }
