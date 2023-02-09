@@ -8,12 +8,12 @@ export const Jumbotron = ()=>{
                 <cite>80 AÑOS DE CIENCIA, EXCELENCIA Y HUMANISMO</cite>
                 <div className="jumbotron-buttons flex-container">
                     <a href="#oferta-educativa">Ver oferta académica</a>
-                    <a
+                    {/*<a
                         href="https://hospitalinfantildemexicofedericogomez.mx/ciclo-de-conferencias-magistrales"
                         target={'_blank'}
                     >
                         Ver conferencias magistrales
-                    </a>
+                    </a>*/}
                 </div>
             </JumbotronTitles>
         </JumbotronWrapper>

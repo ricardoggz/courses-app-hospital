@@ -34,7 +34,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                 </CardDescription>
                     <CardButtons>
                        <button onClick={onOpenModal}>
-                            Cosultar informaciòn
+                            Cosultar información
                         </button>
                     </CardButtons>
                 <Modal
