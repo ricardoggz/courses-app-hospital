@@ -26,7 +26,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                     </CardImage>
                     :
                     <CardImage>
-                        <LazyLoadImage src={'https://hospitalinfantildemexicofedericogomez.mx/wp-content/uploads/2023/01/Banner-01-scaled.jpg'} effect='blur'/>
+                        <LazyLoadImage src={'https://i.ibb.co/tcT8hb8/Banner-01.jpg'} effect='blur'/>
                     </CardImage>
                 }
                 <CardDescription>

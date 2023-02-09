@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 export const JumbotronWrapper = styled.section`
     align-items:center ;
-    background: url('https://hospitalinfantildemexicofedericogomez.mx/wp-content/uploads/2023/02/banner-jumbotron-scaled.jpg') no-repeat;
+    background: url('https://i.ibb.co/4ttBHDf/20230123-115824.jpg') no-repeat;
     background-position: center;
     background-size:cover;
     display:flex;
