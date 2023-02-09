@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const MonthBarWrapper = styled.ul`
-    border: 0.5px solid var(--color-green-secondary);
+    box-shadow: 1px 2px 10px #0003;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1rem;
+    gap:0.2rem;
+    grid-template-columns:repeat(6,1fr);
     justify-content: space-between;
     list-style:none;
+    padding:0.5rem;
     margin-bottom:2rem;
-    width:100%;
+    width:90%;
     li{
         color:var(--color-green-secondary);
         cursor:pointer;
@@ -25,7 +26,7 @@ export const MonthBarWrapper = styled.ul`
         background:var(--color-green-primary);
         color:var(--color-light-primary);
     }
-    @media (min-width:240px) and (max-width:1800px){
+    @media (min-width:240px) and (max-width:1000px){
         grid-template-columns: repeat(3,1fr);
     }
 `
