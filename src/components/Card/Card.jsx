@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -15,8 +15,8 @@ import {
 
 export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
     const [open, setOpen] = useState(false);
-    const onOpenModal = () => setOpen(true);
-    const onCloseModal = () => setOpen(false);
+    const onOpenModal = useCallback(()=> setOpen(true))
+    const onCloseModal = useCallback(() => setOpen(false))
     return (
         <>
             <CardWrapper>
