@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { months } from "../../consts";
 import {
     Container,
@@ -17,8 +17,11 @@ const HomeView = ()=>{
     const [loading, data] = useFetch({
         url: `${import.meta.env.VITE_BASE_URL_API}api/courses/all-courses`
     })
-    let filteredData;
-    if(!loading) filteredData = data.data.filter(course => course.month_id === selectedTab.id)
+    let filteredData = useMemo(()=>{
+        if(!loading) {
+            return data.data.filter(course => course.month_id === selectedTab.id)
+        }
+    })
     
     return (
             <>
