@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Title, Container } from "../../components"
 
 const style={
@@ -16,15 +17,54 @@ const styleButton = {
     color:'#fff',
     padding: '8px'
 }
+const iframeStyle={
+    width:'100%'
+}
 export const LiveVideoView = ()=>{
-    return (
+    const password= '5oCE-03_2023'
+    const [value, setValue] = useState('')
+    const [isEqual, setIsEqual] = useState(false)
+    const onChange = (evt)=> setValue(evt.target.value)
+    const onSubmit = (evt)=>{
+        evt.preventDefault()
+        if(value === password){
+            setIsEqual(true)
+        }
+        else{
+            alert('Contraseña incorrecta')
+        }
+    }
+       return (
         <Container>
             <Title>5to Congreso de enfermería</Title>
-            <form className="flex-container" style={style}>
+            {
+                !isEqual
+                ?
+                <form className="flex-container" style={style} onSubmit>
                 <label>Escriba la contraseña para acceder al curso</label>
-                <input type='text' placeholder="contraseña" required style={styleInput}/>
-                <button style={styleButton}>Ingresar</button>
-            </form>
+                <input
+                type='password'
+                placeholder="contraseña"
+                required
+                style={styleInput}
+                onChange={onChange}
+                />
+                <button style={styleButton} onClick={onSubmit}>Ingresar</button>
+                </form>
+                :
+                <>
+                    <div
+                    >
+                        <iframe
+                        src="https://vimeo.com/event/2884187/embed"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullScreen
+                        style={iframeStyle}
+                        />
+                    </div>
+                </>
+            }
         </Container>
     )
 }
