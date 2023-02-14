@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import { Spinner, Container } from '../components'
 import {
     PaymentView,
-    RegisterView
+    RegisterView,
+    LiveVideoView
 } from '../views'
 
 const HomeView = lazy(()=> {
@@ -21,6 +22,7 @@ export const AppRoutes = ()=>{
             }/>
             {/*<Route path='/payment' element={<PaymentView />}/>
             <Route path='/register' element={<RegisterView />}/>*/}
+            <Route path='/live-video' element={<LiveVideoView />}/>
         </Routes>
     )
 }
