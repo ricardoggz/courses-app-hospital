@@ -1,0 +1,11 @@
+.divFramer{
+    width:50%;
+    height:700px;
+    margin: 0 auto;
+}
+@media(min-width:240px) and (max-width:880px){
+    .divFramer{
+        width:100%;
+        margin:0;
+    }
+}

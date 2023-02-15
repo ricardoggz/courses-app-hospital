@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Title, Container } from "../../components"
-
+import './liveVideoView.css'
 const style={
     border: '1px solid #000',
     display:'flex',
@@ -18,7 +18,11 @@ const styleButton = {
     padding: '8px'
 }
 const iframeStyle={
-    width:'100%'
+    width:'100%',
+    postion: 'absolute',
+    top:'0',
+    left:'0',
+    height:'100%',
 }
 export const LiveVideoView = ()=>{
     const password= '5oCE-03_2023'
@@ -54,6 +58,7 @@ export const LiveVideoView = ()=>{
                 :
                 <>
                     <div
+                        className= 'divFramer'
                     >
                         <iframe
                         src="https://vimeo.com/event/2884187/embed"
