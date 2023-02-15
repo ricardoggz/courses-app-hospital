@@ -68,6 +68,17 @@ export const LiveVideoView = ()=>{
                         style={iframeStyle}
                         />
                     </div>
+                    <iframe
+                        src="https://vimeo.com/event/2884187/chat/"
+                        frameBorder="0"
+                        style={
+                            {
+                                width:'100%',
+                                height:'700px',
+                                padding:'1rem 0'
+                            }
+                        }
+                        />
                 </>
             }
         </Container>
