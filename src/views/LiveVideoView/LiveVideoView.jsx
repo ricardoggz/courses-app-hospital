@@ -57,28 +57,30 @@ export const LiveVideoView = ()=>{
                 </form>
                 :
                 <>
+                    <Title>1er día</Title>
                     <div
                         className= 'divFramer'
                     >
                         <iframe
-                        src="https://vimeo.com/event/2884187/embed"
+                        src="https://player.vimeo.com/video/799642253?h=3598b05463"
                         frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullScreen
                         style={iframeStyle}
                         />
                     </div>
-                    <iframe
-                        src="https://vimeo.com/event/2884187/chat/"
+                    <Title>2do día</Title>
+                    <div
+                        className= 'divFramer'
+                    >
+                        <iframe
+                        src="https://player.vimeo.com/video/799642253?h=3598b05463"
                         frameBorder="0"
-                        style={
-                            {
-                                width:'100%',
-                                height:'400px',
-                                padding:'1rem 0'
-                            }
-                        }
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullScreen
+                        style={iframeStyle}
                         />
+                    </div>
                 </>
             }
         </Container>
