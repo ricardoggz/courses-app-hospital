@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Title, Container } from "../../components"
-import './liveVideoView.css'
+import '../LiveVideoView/liveVideoView.css'
 const style={
     border: '1px solid #000',
     display:'flex',
@@ -24,8 +24,8 @@ const iframeStyle={
     left:'0',
     height:'100%',
 }
-export const LiveVideoView = ()=>{
-    const password= '5oCE-03_2023'
+export const LiveVideoView2 = ()=>{
+    const password= 'CTop_04-2023'
     const [value, setValue] = useState('')
     const [isEqual, setIsEqual] = useState(false)
     const onChange = (evt)=> setValue(evt.target.value)
@@ -40,7 +40,7 @@ export const LiveVideoView = ()=>{
     }
        return (
         <Container>
-            <Title>5to Congreso de enfermería</Title>
+            <Title>Curso-taller de ortopedia pediátrica</Title>
             {
                 !isEqual
                 ?
@@ -61,7 +61,7 @@ export const LiveVideoView = ()=>{
                         className= 'divFramer'
                     >
                         <iframe
-                        src="https://vimeo.com/event/2884187/embed"
+                        src="https://vimeo.com/event/2894319/embed"
                         frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullScreen
@@ -69,12 +69,12 @@ export const LiveVideoView = ()=>{
                         />
                     </div>
                     <iframe
-                        src="https://vimeo.com/event/2884187/chat/"
+                        src="https://vimeo.com/event/2894319/chat/"
                         frameBorder="0"
                         style={
                             {
                                 width:'100%',
-                                height:'400px',
+                                height:'700px',
                                 padding:'1rem 0'
                             }
                         }

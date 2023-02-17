@@ -4,7 +4,8 @@ import { Spinner, Container } from '../components'
 import {
     PaymentView,
     RegisterView,
-    LiveVideoView
+    LiveVideoView,
+    LiveVideoView2
 } from '../views'
 
 const HomeView = lazy(()=> {
@@ -23,6 +24,7 @@ export const AppRoutes = ()=>{
             {/*<Route path='/payment' element={<PaymentView />}/>
             <Route path='/register' element={<RegisterView />}/>*/}
             <Route path='/5to-congreso-enfermeria-2023' element={<LiveVideoView />}/>
+            <Route path='/curso-taller-de-ortopedia-pediatrica' element={<LiveVideoView2 />}/>
         </Routes>
     )
 }
