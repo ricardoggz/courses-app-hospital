@@ -26,7 +26,7 @@ export const Card = ({image, name, price, startDate, place, modality, pdf})=>{
                     </CardImage>
                     :
                     <CardImage>
-                        <LazyLoadImage src={'https://i.ibb.co/tcT8hb8/Banner-01.jpg'} effect='blur'/>
+                        <LazyLoadImage src={'https://res.cloudinary.com/diuxbqmn5/image/upload/v1676678760/banner-80_zhlxd1.webp'} effect='blur'/>
                     </CardImage>
                 }
                 <CardDescription>
