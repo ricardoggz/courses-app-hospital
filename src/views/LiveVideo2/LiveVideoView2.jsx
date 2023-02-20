@@ -79,6 +79,20 @@ export const LiveVideoView2 = ()=>{
                             }
                         }
                         />
+                        <div
+                        className= 'divFramer'
+                    >
+                    </div>
+                    <div className="divFramer">
+                        <Title>Día 1</Title>
+                        <iframe
+                        src="https://player.vimeo.com/video/799959697?h=1c89786b71"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullScreen
+                        style={iframeStyle}
+                        />
+                    </div>
                 </>
             }
         </Container>
