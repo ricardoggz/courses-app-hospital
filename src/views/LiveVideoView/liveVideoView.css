@@ -1,8 +1,15 @@
 .divFramer{
+    display:flex;
+    justify-content: center;
     width:50%;
     height:400px;
     margin: 0 auto;
     padding-bottom:5rem;
+}
+.divFramer iframe{
+    height:400px;
+    margin:0 auto;
+    width:60%;
 }
 @media(min-width:240px) and (max-width:880px){
     .divFramer{

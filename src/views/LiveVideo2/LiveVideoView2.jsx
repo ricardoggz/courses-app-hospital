@@ -17,15 +17,8 @@ const styleButton = {
     color:'#fff',
     padding: '8px'
 }
-const iframeStyle={
-    width:'100%',
-    postion: 'absolute',
-    top:'0',
-    left:'0',
-    height:'100%',
-}
 export const LiveVideoView2 = ()=>{
-    const password= 'CTop_04-2023'
+    const password= 'Spcde-05_2023'
     const [value, setValue] = useState('')
     const [isEqual, setIsEqual] = useState(false)
     const onChange = (evt)=> setValue(evt.target.value)
@@ -40,7 +33,7 @@ export const LiveVideoView2 = ()=>{
     }
        return (
         <Container>
-            <Title>Curso-taller de ortopedia pediátrica</Title>
+            <Title>Simposio: Procesos de  calidad en la desinfección y  esterilización de dispositivos médicos y quirúrgicos</Title>
             {
                 !isEqual
                 ?
@@ -61,20 +54,19 @@ export const LiveVideoView2 = ()=>{
                         className= 'divFramer'
                     >
                         <iframe
-                        src="https://vimeo.com/event/2894319/embed"
+                        src="https://vimeo.com/event/3086474/embed"
                         frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullScreen
-                        style={iframeStyle}
                         />
                     </div>
                     <iframe
-                        src="https://vimeo.com/event/2894319/chat/"
+                        src="https://vimeo.com/event/3086474/chat/"
                         frameBorder="0"
                         style={
                             {
                                 width:'100%',
-                                height:'700px',
+                                height:'600px',
                                 padding:'1rem 0'
                             }
                         }
@@ -82,25 +74,6 @@ export const LiveVideoView2 = ()=>{
                         <div
                         className= 'divFramer'
                     >
-                    </div>
-                    <div className="divFramer">
-                        <Title>Días 1 y 2</Title>
-                        <iframe
-                        src="https://player.vimeo.com/video/799959697?h=1c89786b71"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullScreen
-                        style={iframeStyle}
-                        />
-                    </div>
-                    <div className="divFramer">
-                        <iframe
-                        src="https://player.vimeo.com/video/800866013?h=922f306728"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullScreen
-                        style={iframeStyle}
-                        />
                     </div>
                 </>
             }
