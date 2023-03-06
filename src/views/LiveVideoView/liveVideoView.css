@@ -9,7 +9,7 @@
 .divFramer iframe{
     height:400px;
     margin:0 auto;
-    width:60%;
+    width:100%;
 }
 @media(min-width:240px) and (max-width:880px){
     .divFramer{
