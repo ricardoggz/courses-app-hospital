@@ -50,30 +50,55 @@ export const LiveVideoView2 = ()=>{
                 </form>
                 :
                 <>
+                     <Title>3er día</Title>
                     <div
                         className= 'divFramer'
                     >
                         <iframe
-                        src="https://vimeo.com/event/3086474/embed"
+                        src="https://player.vimeo.com/video/806514290?h=02a9f5aa6d&amp"
                         frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullScreen
                         />
                     </div>
-                    <iframe
-                        src="https://vimeo.com/event/3086474/chat/"
-                        frameBorder="0"
-                        style={
-                            {
-                                width:'100%',
-                                height:'600px',
-                                padding:'1rem 0'
-                            }
-                        }
-                        />
-                        <div
+                    <br />
+                    <br />
+                    <Title>2do día</Title>
+                    <div
                         className= 'divFramer'
                     >
+                        <iframe
+                        src="https://player.vimeo.com/video/806101635?h=33d974ceb7"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullScreen
+                        
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <Title>1er día</Title>
+                    <div
+                        className= 'divFramer'
+                    >
+                        <iframe
+                        src="https://player.vimeo.com/video/805197169?h=8b7cb793fb"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullScreen
+                        
+                        />
+                    </div>
+                    <div
+                        className= 'divFramer'
+                    >
+                        <iframe
+                        src="https://player.vimeo.com/video/806041569?h=5451ebaf6a"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullScreen
+                        
+                        />
                     </div>
                 </>
             }
