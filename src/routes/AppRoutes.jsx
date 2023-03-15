@@ -23,7 +23,7 @@ export const AppRoutes = ()=>{
             }/>
             {/*<Route path='/payment' element={<PaymentView />}/>
             <Route path='/register' element={<RegisterView />}/>*/}
-            <Route path='/5to-congreso-enfermeria-2023' element={<LiveVideoView />}/>
+            <Route path='/seminario-investigacion-2023' element={<LiveVideoView />}/>
             <Route path='/simposio-proceso-de-calidad-en-desinfeccion-esterilizacion' element={<LiveVideoView2 />}/>
         </Routes>
     )
