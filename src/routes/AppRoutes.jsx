@@ -5,7 +5,8 @@ import {
     PaymentView,
     RegisterView,
     LiveVideoView,
-    LiveVideoView2
+    LiveVideoView2,
+    LiveVideoView3
 } from '../views'
 
 const HomeView = lazy(()=> {
@@ -25,6 +26,7 @@ export const AppRoutes = ()=>{
             <Route path='/register' element={<RegisterView />}/>*/}
             <Route path='/seminario-investigacion-2023' element={<LiveVideoView />}/>
             <Route path='/simposio-proceso-de-calidad-en-desinfeccion-esterilizacion' element={<LiveVideoView2 />}/>
+            <Route path='/curso-monografico-estomatologia' element={<LiveVideoView3 />}/>
         </Routes>
     )
 }
