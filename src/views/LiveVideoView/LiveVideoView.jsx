@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Title, Container } from "../../components"
+import { useFetch } from "../../hooks"
+import { Title, Container, GridContainer, Spinner } from "../../components"
 import './liveVideoView.css'
 const style={
     border: '1px solid #000',
@@ -25,9 +26,15 @@ const iframeStyle={
     height:'100%',
 }
 export const LiveVideoView = ()=>{
-    const password= '5oCE-03_2023'
+    const password= 'SemInv_2023'
     const [value, setValue] = useState('')
     const [isEqual, setIsEqual] = useState(false)
+    const [loading, data] = useFetch({
+        url: `https://api.vimeo.com/me/folders/4006815/videos`,
+        config: {
+            headers: { Authorization: `Bearer 586637bf90ea7727edc8c90c95b056c3` }
+        }
+    })
     const onChange = (evt)=> setValue(evt.target.value)
     const onSubmit = (evt)=>{
         evt.preventDefault()
@@ -40,7 +47,7 @@ export const LiveVideoView = ()=>{
     }
        return (
         <Container>
-            <Title>5to Congreso de enfermería</Title>
+            <Title>Seminario de investigación</Title>
             {
                 !isEqual
                 ?
@@ -56,32 +63,24 @@ export const LiveVideoView = ()=>{
                 <button style={styleButton} onClick={onSubmit}>Ingresar</button>
                 </form>
                 :
-                <>
-                    <Title>1er día</Title>
-                    <div
-                        className= 'divFramer'
-                    >
-                        <iframe
-                        src="https://player.vimeo.com/video/798899405?h=24d11384b9"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullScreen
-                        style={iframeStyle}
-                        />
-                    </div>
-                    <Title>2do día</Title>
-                    <div
-                        className= 'divFramer'
-                    >
-                        <iframe
-                        src="https://player.vimeo.com/video/799642253?h=3598b05463"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullScreen
-                        style={iframeStyle}
-                        />
-                    </div>
-                </>
+                <GridContainer>
+                    {
+                    !loading ?
+                        data.data.data.map((video, i)=>(
+                            <div>
+                                <iframe
+                                key={i}
+                                src={video.player_embed_url}
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowFullscreen 
+                                />
+                                <br />
+                                <span>{video.name}</span>
+                            </div>
+                        ))
+                    : <Spinner />
+                    }
+                </GridContainer>
             }
         </Container>
     )
