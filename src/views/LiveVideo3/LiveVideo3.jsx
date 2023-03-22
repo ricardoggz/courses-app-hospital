@@ -1,8 +1,9 @@
 import '../LiveVideoView/liveVideoView.css'
 
 import { useState } from "react"
-import { Title, Container } from "../../components"
+import { Title, Container, GridContainer, Spinner } from "../../components"
 import '../LiveVideoView/liveVideoView.css'
+import { useFetch } from "../../hooks"
 const style={
     border: '1px solid #000',
     display:'flex',
@@ -23,6 +24,12 @@ export const LiveVideoView3 = ()=>{
     const password= 'Cmeca_06_2023'
     const [value, setValue] = useState('')
     const [isEqual, setIsEqual] = useState(false)
+    const [loading, data] = useFetch({
+        url: `https://api.vimeo.com/me/folders/15473924/videos`,
+        config: {
+            headers: { Authorization: `Bearer 586637bf90ea7727edc8c90c95b056c3` }
+        }
+    })
     const onChange = (evt)=> setValue(evt.target.value)
     const onSubmit = (evt)=>{
         evt.preventDefault()
@@ -74,6 +81,26 @@ export const LiveVideoView3 = ()=>{
                             frameborder="0"
                         />
                     </div>
+                    <br />
+                    <Title>Transmisiones anteriores</Title>
+                    <GridContainer>
+                    {
+                    !loading ?
+                        data.data.data.map((video, i)=>(
+                            <div>
+                                <iframe
+                                key={i}
+                                src={video.player_embed_url}
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowFullscreen 
+                                />
+                                <br />
+                                <span>{video.name}</span>
+                            </div>
+                        ))
+                    : <Spinner />
+                    }
+                    </GridContainer>
                 </>
             }
         </Container>
